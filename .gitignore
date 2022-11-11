@@ -1,2 +1,4 @@
 env
 .creds
+.vscode
+src/__pycache__
