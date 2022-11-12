@@ -8,7 +8,7 @@ class QasmApi:
     def __init__(self, project_name: str):
         self.base_uri='https://api.quantum-inspire.com'
         self._load_creds()
-        self.client = QuantumInspireAPI(self.base_uri, self.auth, f"{project_name}")
+        self.client = QuantumInspireAPI(self.base_uri, self.auth, project_name)
         self.result = None
         self.code_path=f"{getcwd()}/src/{project_name}/{project_name}.qasm"
 
