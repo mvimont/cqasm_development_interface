@@ -18,7 +18,7 @@ class QasmApi:
             creds = json.load(file)
             self.auth=BasicAuthentication(**creds)
     
-    def execute(self, number_shots: int = 1024, backend_type: str = "QX single-node simulator"):
+    def execute(self, number_shots: int = 1024, backend_type: str = "QX-34-L"):
         code=self._load_qasm_file(self.code_path)
         backend_type=self.client.get_backend_type_by_name(backend_type)
         self.result = self.client.execute_qasm(code, backend_type, number_shots)
